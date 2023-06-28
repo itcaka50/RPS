@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Game">
+
+    <TextView
+        android:id="@+id/humanChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Your choice:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/compChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Computer Choice:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humanImg" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="380dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:text="You: 0  Computer: 0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compImg" />
+
+    <ImageView
+        android:id="@+id/compImg"
+        android:layout_width="170dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compChoice"
+        tools:srcCompat="@drawable/rock" />
+
+    <ImageView
+        android:id="@+id/humanImg"
+        android:layout_width="170dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humanChoice"
+        tools:srcCompat="@drawable/rock" />
+
+    <Button
+        android:id="@+id/rock_b"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:onClick="RockClick"
+        android:text="Rock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/paper_b"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score"
+        app:layout_constraintVertical_bias="0.415" />
+
+    <Button
+        android:id="@+id/paper_b"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="PaperClick"
+        android:text="Paper"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scissors_b"
+        app:layout_constraintTop_toBottomOf="@+id/score"
+        app:layout_constraintVertical_bias="0.415" />
+
+    <Button
+        android:id="@+id/scissors_b"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="ScissorsClick"
+        android:text="Scissor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score"
+        app:layout_constraintVertical_bias="0.415" />
+</androidx.constraintlayout.widget.ConstraintLayout>
