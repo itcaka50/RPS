@@ -15,7 +15,7 @@ import java.util.Random;
 public class Game extends AppCompatActivity {
 
     Button b_rock, b_paper, b_scissor;
-    TextView tvH,tvC, tvS;
+    TextView tvH,tvC, tvS, txt;
     ImageView humanI, compI;
     int HumanScore, CompScore;
 
@@ -31,6 +31,7 @@ public class Game extends AppCompatActivity {
         tvH = findViewById(R.id.humanChoice);
         tvC = findViewById(R.id.compChoice);
         tvS = findViewById(R.id.score);
+        txt = findViewById(R.id.textView2);
 
         humanI = findViewById(R.id.humanImg);
         compI = findViewById(R.id.compImg);
@@ -40,7 +41,7 @@ public class Game extends AppCompatActivity {
     {
         humanI.setImageResource(R.drawable.rock);
         String message = turn("rock");
-        Toast.makeText(Game.this, message, Toast.LENGTH_SHORT).show();
+        txt.setText(message);
         tvS.setText("You: " + Integer.toString(HumanScore) + " Computer: " + Integer.toString(CompScore));
         GameResult();
     }
@@ -49,7 +50,7 @@ public class Game extends AppCompatActivity {
     {
         humanI.setImageResource(R.drawable.paper);
         String message = turn("paper");
-        Toast.makeText(Game.this, message, Toast.LENGTH_SHORT).show();
+        txt.setText(message);
         tvS.setText("You: " + Integer.toString(HumanScore) + " Computer: " + Integer.toString(CompScore));
         GameResult();
     }
@@ -58,7 +59,7 @@ public class Game extends AppCompatActivity {
     {
         humanI.setImageResource(R.drawable.scissor);
         String message = turn("scissors");
-        Toast.makeText(Game.this, message, Toast.LENGTH_SHORT).show();
+        txt.setText(message);
         tvS.setText("You: " + Integer.toString(HumanScore) + " Computer: " + Integer.toString(CompScore));
         GameResult();
     }
@@ -91,22 +92,22 @@ public class Game extends AppCompatActivity {
             return "Draw.";
         } else if (a == "rock" && b == "scissors") {
             HumanScore++;
-            return "Rock wins! Point for you.";
+            return "W";
         } else if (a == "rock" && b == "paper") {
             CompScore++;
-            return "Paper wins! Point for the computer.";
+            return "L";
         } else if (a == "scissors" && b == "rock") {
             CompScore++;
-            return "Rock wins! Point for the computer.";
+            return "L";
         } else if (a == "scissors" && b == "paper") {
             HumanScore++;
-            return "Scissors win! Point for you.";
+            return "W";
         } else if (a == "paper" && b == "rock") {
             HumanScore++;
-            return "Paper wins! Point for you.";
+            return "W";
         } else if (a == "paper" && b == "scissors") {
             CompScore++;
-            return "Scissors win! Point for the computer.";
+            return "L";
         } else {
             return "HUH";
         }

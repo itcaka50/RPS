@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0091EA"
     tools:context=".PostGame">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,26 +25,29 @@
         android:id="@+id/goBack"
         android:layout_width="180dp"
         android:layout_height="70dp"
-        android:text="Main Menu"
+        android:backgroundTint="#304FFE"
         android:onClick="GoBack"
+        android:text="Main Menu"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ShareGame"
-        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultTxt"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintVertical_bias="0.715" />
 
     <Button
         android:id="@+id/ShareGame"
         android:layout_width="180dp"
         android:layout_height="70dp"
         android:layout_marginEnd="16dp"
-        android:text="Share Score"
+        android:backgroundTint="#304FFE"
         android:onClick="Share"
+        android:text="Share Score"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultTxt"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintVertical_bias="0.715" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
