@@ -74,41 +74,43 @@
         android:id="@+id/rock_b"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="#304FFE"
         android:onClick="RockClick"
         android:text="Rock"
-        android:backgroundTint="#304FFE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/paper_b"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/score"
         app:layout_constraintTop_toBottomOf="@+id/score"
-        app:layout_constraintVertical_bias="0.415" />
+        app:layout_constraintVertical_bias="0.464" />
 
     <Button
         android:id="@+id/paper_b"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="32dp"
         android:backgroundTint="#304FFE"
         android:onClick="PaperClick"
         android:text="Paper"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/scissors_b"
+        app:layout_constraintEnd_toEndOf="@+id/score"
+        app:layout_constraintStart_toStartOf="@+id/score"
         app:layout_constraintTop_toBottomOf="@+id/score"
-        app:layout_constraintVertical_bias="0.415" />
+        app:layout_constraintVertical_bias="0.464" />
 
     <Button
         android:id="@+id/scissors_b"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="16dp"
-        android:onClick="ScissorsClick"
         android:backgroundTint="#304FFE"
+        android:onClick="ScissorsClick"
         android:text="Scissor"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/score"
+        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintStart_toEndOf="@+id/paper_b"
         app:layout_constraintTop_toBottomOf="@+id/score"
-        app:layout_constraintVertical_bias="0.415" />
+        app:layout_constraintVertical_bias="0.464" />
 
     <TextView
         android:id="@+id/textView2"
