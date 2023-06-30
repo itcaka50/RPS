@@ -120,12 +120,16 @@ public class Game extends AppCompatActivity {
         {
             Intent intent = new Intent(this, PostGame.class);
             intent.putExtra("result", "You have won the game!");
+            intent.putExtra("humanS", HumanScore);
+            intent.putExtra("compS", CompScore);
             startActivity(intent);
         }
         if(CompScore == 10)
         {
             Intent intent = new Intent(this, PostGame.class);
             intent.putExtra("result", "You lost! L + ratio");
+            intent.putExtra("humanS", HumanScore);
+            intent.putExtra("compS", CompScore);
             startActivity(intent);
         }
     }
